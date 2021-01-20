@@ -1,12 +1,12 @@
 import pandas as pd
 import glob
 import csv
-path = r'/Users/deepayandebnath/Documents/USDA_PSD' # path
+path = r'Path name' # path
 all_files = glob.glob(path + "/*.csv")
 li = []
 for filename in all_files:
     df = pd.read_csv(filename, index_col=None, header=0)
     li.append(df)
 frame = pd.concat(li, axis=0, ignore_index=True)
-frame.to_csv(r'/Users/deepayandebnath/Documents/USDA_PSD/All_PSD.csv', index = False)
+frame.to_csv(r'Path name/All_PSD.csv', index = False)
 #print(frame)
