@@ -11,9 +11,7 @@ Commodity=["0410000", "0422110", "0451000", "0459200", "0612000", "0577901", "05
 for i in Commodity:
     for j in range(1980, 2020):
         header= {'API_KEY': 'A9015057-C160-4A5B-8666-63F7BE89AFAE','accept': 'application/json', 'accept': 'text/csv'}
-        #url='https://apps.fas.usda.gov/PSDOnlineDataServices/swagger/docs/v1'+API
-        url1='https://apps.fas.usda.gov/PSDOnlineDataServices/api/CommodityData/GetCommodityDataByYear?'
-        #url='https://apps.fas.usda.gov/PSDOnlineDataServices/api/CommodityData/GetCommodityDataByYear?commodityCode=2631000&marketYear=2019'
+        url='https://apps.fas.usda.gov/PSDOnlineDataServices/api/CommodityData/GetCommodityDataByYear?'
         commodityCode = i
         marketYear = str(j)
         X=url1+'commodityCode='+commodityCode+'&marketYear='+marketYear
